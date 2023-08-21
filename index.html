@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Personal Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+    </style>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Dancing Script', cursive;
+            background-color: #957DAD;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            height: 100vh;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 20px auto;
+            background: url('ja.jpg') center/cover;
+        }
+
+        .personal-info {
+            margin: 20px 0;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .icon {
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 24px;
+        }
+
+
+        /* Color Variables */
+        :root {
+
+
+            --magenta: #CC006A;
+
+        }
+
+        .planets {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            margin: 4rem 0;
+            z-index: -1;
+        }
+
+        .stars {
+            stroke: none;
+            animation: twinkle 12s linear infinite;
+        }
+
+        .star0,
+        .star1,
+        .star2,
+        .star3,
+        .star4,
+        .star5 {
+            animation: twinkle 12s linear infinite;
+        }
+
+        .star0 {
+            animation-delay: 0s;
+            animation-duration: 6s;
+        }
+
+        .star1 {
+            animation-delay: 1s;
+            animation-duration: 5s;
+        }
+
+        .star2 {
+            animation-delay: 2s;
+            animation-duration: 4s;
+        }
+
+        .star3 {
+            animation-delay: 3s;
+            animation-duration: 3s;
+        }
+
+        .star4 {
+            animation-delay: 4s;
+            animation-duration: 2s;
+        }
+
+        .star5 {}
+
+        @keyframes twinkle {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(10deg);
+            }
+
+            50% {
+                transform: rotate(20deg);
+            }
+
+            100% {
+                transform: rotate(10deg);
+            }
+        }
+
+        #stars-background{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            margin: 4rem 0;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="profile-pic"></div>
+        <svg width="80%" height="50" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="wavy-pattern" width="200" height="50" patternUnits="userSpaceOnUse">
+                    <path d="M0 25 Q 50 0, 100 25 T 200 25" stroke=" #FFDFD3" fill="none" />
+                </pattern>
+            </defs>
+            <rect width="100%" height="50" fill="url(#wavy-pattern)" />
+        </svg>
+        <div class="personal-info">
+            <h2>Hana Babić</h2>
+            <p>Bosnian: born on 04.02.2000 </p>
+            <p>Living: 6020 Innsbruck</p>
+            <p>Student @ University of Innsbruck - IT</p>
+            <p>Part of STV Informatik @ UIBK</p>
+            <div class="social-icons">
+                <a class="icon" href="https://instagram.com/hana._.babic?igshid=MmIzYWVlNDQ5Yg=="><i
+                        class="fab fa-instagram"></i></a>
+                <a class="icon" href="https://x.com/hanababiic?s=11&t=vA4Uisep5dgUMJQnw1xnmA"><i
+                        class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <svg width="80%" height="50" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="wavy-pattern" width="200" height="50" patternUnits="userSpaceOnUse">
+                    <path d="M0 25 Q 50 0, 100 25 T 200 25" stroke="#000" fill="none" />
+                </pattern>
+            </defs>
+            <rect width="100%" height="50" fill="url(#wavy-pattern)" />
+        </svg>
+    </div>
+    <div class="stars">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <!-- Add more stars as needed -->
+    </div>
+    <script>
+  // JavaScript code for star animation can be added here
+    </script>
+
+
+    <div class="planets">
+        <svg id="moonstars" width="317" height="146" viewBox="0 0 317 146" xmlns="http://www.w3.org/2000/svg"
+            onclick="moonstars.reset().play();">
+            <g class="moon" stroke="#141413" fill="none" fill-rule="evenodd" stroke-linecap="round"
+                stroke-linejoin="bevel">
+                <pattern id="star-pattern" width="317" height="146" patternUnits="userSpaceOnUse">
+                    <g class="stars" fill=" #FFDFD3">
+                        <path
+                            d="M41.2747 8.7875L39.0385 6.243l.559-3.534c.1398-.5654-.1397-1.1308-.559-1.4135-.4193-.2828-.9783-.424-1.5374-.1414l-3.214 1.697-3.215-1.697c-.419-.282-.978-.141-1.537.142-.419.283-.699.848-.559 1.414l.559 3.534-2.516 2.545c-.419.424-.559.99-.419 1.414.14.566.559.849 1.118.99l3.634.566 1.538 3.251c.28.424.699.848 1.258.848s.979-.282 1.258-.848l1.537-3.251 3.634-.565c.559-.141.979-.424 1.118-.989.14-.565 0-1.131-.419-1.413z"
+                            class="star5" />
+                        <path
+                            d="M14.474 138.1216l-2.046-2.328.5116-3.233c.1278-.5174-.128-1.0348-.5115-1.2934-.383-.2587-.895-.388-1.406-.1293l-2.941 1.551-2.941-1.552c-.383-.259-.895-.13-1.406.129-.383.258-.639.776-.511 1.293l.512 3.233-2.301 2.328c-.383.388-.511.905-.383 1.293.128.517.512.776 1.023.905l3.325.517 1.406 2.975c.256.388.64.776 1.151.776s.895-.259 1.151-.776l1.407-2.975 3.325-.518c.512-.129.895-.388 1.023-.905.128-.518 0-1.035-.383-1.293z"
+                            class="star4" />
+                        <path
+                            d="M315.359 39.5376l-1.674-1.9047.4184-2.646c.1046-.424-.1046-.847-.4185-1.059-.314-.212-.733-.318-1.151-.106l-2.407 1.27-2.407-1.27c-.314-.212-.733-.106-1.151.105-.314.212-.523.635-.419 1.058l.418 2.645-1.883 1.904c-.314.318-.419.741-.314 1.058.104.423.418.635.837.741l2.72.423 1.151 2.433c.209.3172.523.635.941.635s.732-.212.941-.635l1.151-2.434 2.72-.423c.418-.106.732-.3178.837-.741.104-.423 0-.8465-.314-1.058z"
+                            class="star3" />
+                        <path
+                            d="M259.426 119.79l-1.332-1.5157.333-2.1053c.0832-.337-.0833-.6738-.333-.8422-.25-.1684-.583-.2526-.916-.0842l-1.915 1.0106-1.915-1.0106c-.2498-.1684-.583-.0842-.916.0842-.2497.1684-.4163.5053-.333.8422l.333 2.1053-1.4987 1.5158c-.2497.253-.333.59-.2497.843.0832.337.333.506.666.59l2.165.337.9157 1.937c.1666.253.4164.506.7494.506.333 0 .5828-.168.7494-.505l.916-1.937 2.165-.336c.333-.084.583-.252.666-.589.084-.337 0-.673-.249-.842z"
+                            class="star2" />
+                        <path
+                            d="M224.6333 23.506l-2.2362-2.5444.56-3.534c.14-.5654-.14-1.1308-.559-1.4136-.419-.2827-.978-.424-1.537-.1413l-3.214 1.6963-3.214-1.6963c-.419-.2827-.978-.1414-1.537.1413-.419.2828-.699.8482-.559 1.4136l.559 3.534-2.515 2.5445c-.419.424-.559.99-.419 1.414.14.566.559.848 1.118.99l3.634.566 1.537 3.251c.28.424.699.849 1.258.849s.978-.282 1.258-.848l1.538-3.251 3.634-.565c.559-.141.978-.424 1.118-.989.14-.565 0-1.131-.419-1.413z"
+                            class="star1" />
+                        <path
+                            d="M94.8036 93.628l-1.4273-1.624.3568-2.2558c.09-.361-.089-.7218-.356-.9023-.267-.181-.624-.271-.981-.091l-2.051 1.083-2.052-1.083c-.267-.181-.624-.09-.981.09-.267.18-.446.541-.356.902l.357 2.255-1.605 1.624c-.267.271-.357.631-.267.902.09.361.357.541.714.631l2.32.361.981 2.075c.179.271.446.541.803.541.357 0 .625-.181.803-.542l.981-2.075 2.32-.361c.357-.091.624-.271.7138-.632.089-.361 0-.722-.2677-.902z"
+                            class="star0" />
+                    </g>
+                </pattern>
+            </g>
+        </svg>
+        
+    </div>
+    <svg id="stars-background">
+        <rect width="100%" height="100%" fill="url(#star-pattern)" stroke="none"/>
+    </svg>
+</body>
+
+</html>
